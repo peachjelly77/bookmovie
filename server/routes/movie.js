@@ -19,21 +19,6 @@ router.post("/add-movie", auth, async (req, res) => {
     }
   });
 
-//update movie
-router.post("/update-movie", authMiddleware, async (req, res) => {
-    try {
-      await Movie.findByIdAndUpdate(req.body.movieId, req.body);
-      res.send({
-        success: true,
-        message: "Movie updated successfully",
-      });
-    } catch (error) {
-      res.send({
-        success: false,
-        message: error.message,
-      });
-    }
-  });
 
 //bring all movie
 router.get("/get-all-movies", async (req, res) => {
