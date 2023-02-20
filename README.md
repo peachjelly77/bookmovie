@@ -2,6 +2,6 @@
 
 #server => nodemon server/server
 
-#client
-cd client
-npm run start
+#client =>
+#cd client
+#npm run start
